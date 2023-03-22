@@ -1,6 +1,6 @@
-@use './colors' as *;
-@use './components' as *;
-@use './mixins' as *;
+@use './colors' as col;
+@use './components' as com;
+@use './mixins' as mix;
 
 *,
 *::before,
@@ -18,4 +18,35 @@ html {
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
+	color: col.$pure-white;
+}
+
+// NAVIGATION
+.burger-btn {
+	position: fixed; //as we want it always to be in the right corner
+	top: 20px;
+	right: 20px;
+	padding: 1em;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1000;
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 8px;
+	}
+
+	&__box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+
+	&__bars,
+	&__bars::before,
+	&__bars::after {
+		@include mix.burgerBtn;
+	}
 }

@@ -1,0 +1,10 @@
+@use './colors' as col; //added myself to make it work
+
+@mixin burgerBtn {
+	position: absolute;
+	content: '';
+	right: 0;
+	height: 3px;
+	background-color: col.$pure-white;
+	transition: width 0.3s;
+}
