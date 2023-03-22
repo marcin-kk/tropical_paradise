@@ -18,7 +18,7 @@ html {
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
-	color: col.$pure-white;
+	// color: col.$pure-white;
 }
 
 // NAVIGATION
@@ -69,4 +69,18 @@ body {
 			transition-delay: .1s;
 		}
 	}
+}
+
+//HEADER
+.header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2em;
+	height: 75vh;
+	text-align: center;
+	color: col.$pure-white;
+	@include mix.heroImages('../img/palm-3172367_640.jpg');
 }
