@@ -71,6 +71,44 @@ body {
 	}
 }
 
+.nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-image: col.$blue-gradient-solid;
+	z-index: 100; //needs to be less than burger btn has (1000)
+
+	&__item {
+		position: relative; //as there will be :hover action applied later
+		display: block;
+		margin: 0.5em 0;
+		padding: 0.5em 2em;
+		font-size: 2.8rem;
+		color: col.$pure-white;
+		text-decoration: none;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 3px;
+			transform: scaleY(0); //as it will be animated when :hover
+			transition: transform 0.3s;
+			background-color: col.$pure-white;
+		}
+		&:hover::before {
+			//when I hover on item something needs to happen with ::before
+			transform: scaleY(1);
+		}
+	}
+}
+
 //HEADER
 .header {
 	position: relative;
