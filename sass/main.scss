@@ -261,6 +261,59 @@ body {
 				}
 			}
 		}
+		&-info {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background-image: col.$light-blue-gradient-solid;
+			border-radius: 8px;
+			opacity: 0;
+			transform: rotateY(180);
+			transition: opacity 1s, transform 1s;
+
+			&-title {
+				@include mix.islandCardStyles;
+				// position: absolute;
+				// left: 50%;
+				// transform: translateX(-50%);
+				top: 1.2em; //so that the title is in the same place in front and on the back of the card
+				font-family: 'Dancing Script', cursive;
+				font-size: 2.8rem;
+			}
+			&-list {
+				margin: 0 auto;
+				width: 70%;
+				list-style: none;
+				&-item {
+					padding: 1em;
+					font-size: 1.4rem;
+					border-bottom: 1px solid col.$light-white;
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+			&-btn {
+				@include mix.islandCardStyles;
+				// position: absolute;
+				// left: 50%;
+				// transform: translateX(-50%);
+				bottom: 2em;
+				padding: 1em;
+				width: 80%;
+				border: none;
+				background-color: col.$green-color;
+				cursor: pointer;
+				&::before {
+					background-color: col.$green-color-hover;
+				}
+			}
+		}
 	}
 }
 
