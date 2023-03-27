@@ -317,6 +317,18 @@ body {
 	}
 }
 
+
+//OFFERS
+
+.offers {
+	position: relative; //as white blocks need to be positioned
+	@include mix.heroImages('../img/hawaii-79928_640.jpg');
+
+}
+
+
+
+
 //===================================
 // MEDIA
 //===================================
@@ -349,7 +361,7 @@ body {
 
 @media (min-width: 768px) {
 	.white-block {
-		height: 50px;
+		height: 51px;
 		width: 45%;
 	}
 	.header {

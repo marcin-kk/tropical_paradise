@@ -362,6 +362,14 @@ body {
   background-color: #0fe29c;
 }
 
+.offers {
+  position: relative;
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/hawaii-79928_640.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 @media (min-width: 576px) {
   .dreams__box {
     flex-direction: row;
@@ -386,7 +394,7 @@ body {
 }
 @media (min-width: 768px) {
   .white-block {
-    height: 50px;
+    height: 51px;
     width: 45%;
   }
   .header__heading {
