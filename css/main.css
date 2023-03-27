@@ -415,6 +415,10 @@ body {
   background-color: #164dcc;
 }
 
+.reviews__box {
+  position: relative;
+}
+
 @media (min-width: 576px) {
   .dreams__box {
     flex-direction: row;

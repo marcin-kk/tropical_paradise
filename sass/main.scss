@@ -370,6 +370,14 @@ body {
 	}
 }
 
+//REVIEWS
+
+.reviews {
+	&__box{
+		position: relative; //as then we will be positioning the pics
+	}
+}
+
 //===================================
 // MEDIA
 //===================================
