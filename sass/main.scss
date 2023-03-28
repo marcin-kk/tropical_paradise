@@ -21,6 +21,7 @@ body {
 	// color: col.$pure-white;
 }
 
+
 // NAVIGATION
 .burger-btn {
 	position: fixed; //as we want it always to be in the right corner
@@ -56,6 +57,15 @@ body {
 	&__bars::after {
 		@include mix.burgerBtn;
 	}
+
+	// @mixin burgerBtn {
+	// 	position: absolute;
+	// 	content: '';
+	// 	right: 0;
+	// 	height: 3px;
+	// 	background-color: col.$pure-white;
+	// 	transition: width 0.3s;
+	// }
 
 	&__bars {
 		width: 100%;
@@ -127,6 +137,13 @@ body {
 
 .nav-items-animation {
 	animation: navItemsAnimation 1s both; // animation-fill-mode  - start from 0 and stop and keep at 100%
+}
+
+// used in JS to change the burger color from white to black
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: col.$dark;
 }
 
 //HEADER
