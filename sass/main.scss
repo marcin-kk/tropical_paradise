@@ -415,6 +415,58 @@ body {
 	}
 }
 
+//CONTACT
+
+.contact {
+	position: relative;
+	background-color: col.$light-white;
+	overflow: hidden;
+	.white-block-left {
+		background-color: col.$dark;
+	}
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+	&__form-input {
+		@include mix.contactForm;
+	}
+	// @mixin contactForm {
+	// 	margin-bottom: 2em;
+	// 	padding: 0.6em 1.2em;
+	// 	border: none;
+	// 	border-radius: 8px;
+	// 	font-size: 1.6rem;
+	// }
+	&__form-textarea {
+		max-width: 100%; //so that users cannot change the size
+		min-width: 100%; //so that users cannot change the size
+		width: 100%;
+		min-height: 150px;
+		margin-bottom: 0.6em;
+	}
+	&__form-btn {
+		align-self: flex-end;
+		padding: 1em;
+		width: 100%;
+		max-width: 300px;
+		color: col.$pure-white;
+		border: none;
+		border-radius: 8px;
+		background-color: col.$main-color;
+		cursor: pointer;
+
+		&::before {
+			background-color: col.$secondary-color;
+		}
+	}
+}
+
 //===================================
 // MEDIA
 //===================================

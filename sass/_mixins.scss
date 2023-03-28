@@ -10,7 +10,7 @@
 	transition: width 0.3s;
 }
 
-@mixin heroImages($bgImg){
+@mixin heroImages($bgImg) {
 	background-image: col.$blue-gradient, url($bgImg);
 	background-size: cover;
 	background-position: center;
@@ -21,4 +21,12 @@
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%);
+}
+
+@mixin contactForm {
+	margin-bottom: 2em;
+	padding: 0.6em 1.2em;
+	border: none;
+	border-radius: 8px;
+	font-size: 1.6rem;
 }
